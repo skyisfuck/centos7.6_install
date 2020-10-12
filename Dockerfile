@@ -14,4 +14,5 @@ RUN set -e && \
 RUN set -e && \
     ansible-galaxy collection install community.mysql community.rabbitmq
 
+
 CMD ["python", "-m", "SimpleHTTPServer", "80"]
