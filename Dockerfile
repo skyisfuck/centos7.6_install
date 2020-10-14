@@ -12,6 +12,7 @@ RUN set -e && \
     pip install ansible netaddr --no-cache-dir
 
 RUN set -e && \
-    ansible-galaxy collection install community.mysql community.rabbitmq
+    ansible-galaxy collection install community.mysql community.rabbitmq \
+                                      community.general
 
 CMD ["python", "-m", "SimpleHTTPServer", "80"]
